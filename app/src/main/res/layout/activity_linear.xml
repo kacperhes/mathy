@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:background="@color/bgColor"
+    tools:context="pl.kacperhes.mathy.LinearActivity">
+
+    <LinearLayout
+        android:id="@+id/linearMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/linear_text_a"
+            android:textColor="@color/colorDark"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/linear_text_b"
+            android:textColor="@color/colorDark"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearSecondLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearMainLayout"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/linearAX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/x_value"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="numberSigned|numberDecimal"/>
+        <EditText
+            android:id="@+id/linearAY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/y_value"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="numberSigned|numberDecimal"/>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="40dp"
+            android:background="#000000" />
+
+
+        <EditText
+            android:id="@+id/linearBX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/x_value"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="numberSigned|numberDecimal"/>
+        <EditText
+            android:id="@+id/linearBY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/y_value"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="numberSigned|numberDecimal"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/linearButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearSecondLayout"
+        android:text="@string/count_button"
+        android:textSize="20sp"
+        android:textColor="@color/bgColor"
+        android:background="@color/colorPrimary"
+        android:onClick="countLinear"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearButton"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/linearSolutions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"/>
+
+    </ScrollView>
+
+</RelativeLayout>

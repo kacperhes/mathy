@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Mathy</string>
+    <string name="quadratic_button">QUADRATIC</string>
+    <string name="linear_button">LINEAR</string>
+    <string name="circles_button">CIRCLES</string>
+    <string name="delta_equation">Ax² + Bx + C = 0</string>
+    <string name="delta_a">A</string>
+    <string name="delta_b">B</string>
+    <string name="delta_c">C</string>
+    <string name="count_button">COUNT</string>
+    <string name="linear_text_a">A</string>
+    <string name="linear_text_b">B</string>
+    <string name="x_value">X</string>
+    <string name="y_value">Y</string>
+    <string name="circle_1">Circle 1</string>
+    <string name="circle_2">Circle 2</string>
+    <string name="radius">R</string>
+    <string name="main_logo">Main logo</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

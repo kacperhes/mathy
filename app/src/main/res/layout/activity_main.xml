@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/bgColor"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="pl.kacperhes.mathy.MainActivity">
+
+    <ImageView
+        android:id="@+id/mathyLogo"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:contentDescription="@string/main_logo"
+        android:foregroundGravity="center"
+        android:scaleType="center"
+        android:src="@drawable/logo" />
+
+
+        <Button
+            android:id="@+id/quadratic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mathyLogo"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/colorPrimary"
+            android:onClick="startQuadratic"
+            android:text="@string/quadratic_button"
+            android:textColor="@color/bgColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/quadratic"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/colorPrimary"
+            android:onClick="startLinear"
+            android:text="@string/linear_button"
+            android:textColor="@color/bgColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/circles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/colorPrimary"
+            android:onClick="startCircles"
+            android:text="@string/circles_button"
+            android:textColor="@color/bgColor"
+            android:textStyle="bold"/>
+
+</RelativeLayout>

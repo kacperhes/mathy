@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:background="@color/bgColor"
+    tools:context="pl.kacperhes.mathy.CirclesActivity">
+
+    <LinearLayout
+        android:id="@+id/circlesLinearFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/circlesShow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/circle_1"
+            android:textSize="25sp"
+            android:textColor="@color/colorDark"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/circlesShow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/circle_2"
+            android:textSize="25sp"
+            android:textColor="@color/colorDark"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/circleLinearSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circlesLinearFirst"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/circlesAX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/x_value"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="numberSigned|numberDecimal"/>
+        <EditText
+            android:id="@+id/circlesAY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/y_value"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="numberSigned|numberDecimal"/>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="40dp"
+            android:background="#000000" />
+
+
+        <EditText
+            android:id="@+id/circlesBX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/x_value"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="numberSigned|numberDecimal"/>
+        <EditText
+            android:id="@+id/circlesBY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/y_value"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="numberSigned|numberDecimal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/circlesLinearThird"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circleLinearSecond"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/circlesRad1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/radius"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="numberSigned|numberDecimal"/>
+        <EditText
+            android:id="@+id/circlesRad2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/radius"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:inputType="numberSigned|numberDecimal"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/circlesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circlesLinearThird"
+        android:text="@string/count_button"
+        android:textColor="@color/bgColor"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:onClick="calculateCircles"/>
+
+    <ScrollView
+        android:id="@+id/circleScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circlesButton"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/circlesSolution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"/>
+
+    </ScrollView>
+
+</RelativeLayout>
